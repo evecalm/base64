@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Base64 Online</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="file-area full-width" id="file-area">
+		<div class="file-mask hide" id="mask"></div>
+		<div class="file-prop">
+			Here is the file's info.
+			<ul class="file-info" id="file-info"></ul>
+		</div>
+		<div class="tips" id="tips">
+			<span id="tip-text">Drag your file to here</span>
+			<input type="file" id="file" class="file-input">
+		</div>
+	</div>
+	<div class="base64-area zero-width" id="base64-area">
+		<div class="wrapper">
+		<div class="base64-code" id="base64-code"></div>
+		<div class="copy-area">
+			<button id="copy">Copy Code</button>
+		</div>
+		</div>
+	</div>
+	<script src="main.js"></script>
+</body>
+</html>

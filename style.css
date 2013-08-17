@@ -1,0 +1,97 @@
+html,body{
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.file-area,.base64-area{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	top: 10%;
+	bottom: 10%;
+	border-radius: 10px;
+	transition: all 200ms linear;
+}
+.file-area{
+	left: 9%;
+	border: 4px dashed #ccc;
+}
+.file-area.hover{
+	box-shadow: 0 0 8px 2px rgba(82,168,236,0.7);
+}
+.file-mask{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color: #6ab8e6;
+	opacity: .3;
+	z-index: 99;
+}
+.base64-area{
+	right: 9%;
+	color: #666;
+	border: 4px solid #ccc;
+}
+.wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.base64-code{
+	position: absolute;
+	word-break: break-all;
+	overflow-y: auto;
+	top: 4px;
+	right: 4px;
+	bottom: 34px;
+	left: 4px;
+}
+.copy-area{
+	position: absolute;
+	height: 30px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #ddd;
+	text-align: center;
+}
+.tips{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	margin-top: -30px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 30px;
+}
+.file-input{
+	display: block;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+}
+.hide{
+	display: none;
+}
+.zero-width{
+	width: 0;
+	opacity: 0;
+}
+.full-width{
+	width: 80%;
+}
+.half-width{
+	width: 40%;
+	opacity: 1;
+}
