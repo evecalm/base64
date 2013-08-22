@@ -1,11 +1,16 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 html,body{
 	margin: 0;
 	width: 100%;
 	height: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body{
+	background: #fff url(../resource/bg.png) repeat top left;
 }
 .file-area,.base64-area{
 	-webkit-box-sizing: border-box;
@@ -94,4 +99,38 @@ html,body{
 .half-width{
 	width: 40%;
 	opacity: 1;
+}
+
+.choose{
+	margin: 0 auto;
+}
+.choose:after{
+	content: '';
+	display: block;
+	float: none;
+	clear: both;
+	visibility: hidden;
+}
+.choose .radio{
+	/*display: inline-block;*/
+	float: left;
+	text-align: center;
+	width: 50%;
+}
+.choose .radio input[type="radio"]{
+	/*opacity: 0;*/
+	display: none;
+}
+.choose .radio label{
+	display: block;
+	/*width: 100%;*/
+	/*height: 100%;*/
+}
+.choose .radio input[type="radio"]:checked + label{
+	color: blue;
+	background-color: #fff;
+}
+
+.encode-choose .choose{
+	width: 150px;
 }

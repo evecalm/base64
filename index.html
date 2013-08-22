@@ -3,13 +3,25 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Base64 Online</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 	<div class="file-area full-width" id="file-area">
 		<div class="file-mask hide" id="mask"></div>
+		<div class="encode-choose">
+			<div class="choose">
+				<div class="radio">
+					<input type="radio" name="encode" value="file" id="r-encode-file">
+					<label for="r-encode-file">File</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="encode" value="string" id="r-encode-string">
+					<label for="r-encode-string">String</label>
+				</div>
+			</div>
+		</div>
 		<div class="file-prop">
-			Here is the file's info.
+			<!-- Here is the file's info. -->
 			<ul class="file-info" id="file-info"></ul>
 		</div>
 		<div class="tips" id="tips">
@@ -25,6 +37,7 @@
 		</div>
 		</div>
 	</div>
-	<script src="main.js"></script>
+	<script src="./js/ZeroClipboard.min.js"></script>
+	<script src="./js/main.js"></script>
 </body>
 </html>

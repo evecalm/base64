@@ -8,7 +8,21 @@ var $ = function  (id) {
 	base64Code = $('base64-code'),
 	file = $('file'),
 	mask = $('mask'),
-	fileInfo = $('file-info')
+	fileInfo = $('file-info'),
+	clip = new ZeroClipboard.Client()
+
+clip.glue('copy')
+
+clip.addEventListener( 'mouseDown', function() {
+    clip.setText(base64Code.innerText);
+});
+clip.addEventListener( 'onComplete', function() {
+	alert('已成功复制到剪贴板')
+});
+
+window.onresize = function(){
+	clip.reposition()
+}
 
 function nullFun (e) {
 	e.stopPropagation()
@@ -68,7 +82,6 @@ function fileSelected (e) {
 		value += 'bit'
 	}
 	fileProp.push('Size: ' + value)
-	fileProp.push('Last Modified Date: ' + file['lastModifiedDate'])
 	fileProp = fileProp.join('</li><li>')
 	fileProp = '<li>' + fileProp + '</li>'
 	fileInfo.innerHTML = fileProp
@@ -89,4 +102,7 @@ function loaded (e) {
 	base64Area.classList.remove('zero-width')
 	base64Area.classList.add('half-width')
 	base64Code.innerText = e.target.result
+	setTimeout(function  () {
+		clip.reposition()
+	},500)
 }
